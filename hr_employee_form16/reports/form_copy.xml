@@ -1,0 +1,1187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <template id="form16_selvi_format_template">
+        <t t-call="web.html_container">
+            <!-- <t t-call="web.basic_layout"> -->
+
+
+            <!-- ✅ ADD THIS FOOTER - appears on every page -->
+            <!-- <div class="footer" style="
+                text-align: center;
+                color: #888888;
+                font-size: 8pt;
+                font-style: italic;
+                border-top: 1px solid #cccccc;
+                padding-top: 5px;
+                margin: 0 20px;">
+                *** This is an auto-generated document. Please do not reply to this email. ***
+            </div> -->
+
+
+                
+
+               
+
+
+
+
+            <t t-foreach="docs" t-as="form16">
+
+                <div class="article"
+                    t-att-data-oe-model="form16._name"
+                    t-att-data-oe-id="form16.id">
+
+
+
+                        <div class="page" style="font-family: Arial; font-size: 8pt;">
+
+                            <!-- ===================== OUTER BORDER ===================== -->
+
+                            <table style="width:100%; border-collapse:collapse; border:1px solid #000; font-size:7pt; font-family:Arial, sans-serif;">
+                                <tbody>
+                                <!-- HEADER -->
+                                <tr>
+                                    <td colspan="6" style="border:1px solid #000; text-align:center; font-weight:bold; font-size:9pt;">
+                                        FORM NO. 16666
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="border:1px solid #000; text-align:center; font-size:8pt;">
+                                        [See rule 31(I)(a)]
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="border:1px solid #000; text-align:center; font-weight:bold;">
+                                        PART A
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="border:1px solid #000; text-align:center;">
+                                        Certificate under section 203 of the Income-tax Act, 1961 for Tax deducted at source on Salary
+                                    </td>
+                                </tr>
+
+                                <!-- CERTIFICATE NO + LAST UPDATED -->
+                                <tr>
+                                    <td colspan="3" style="border:1px solid #000; padding:4px;">
+                                        <strong>Certificate Number</strong><br/>
+                                        <span t-field="form16.certificate_number"/>
+                                    </td>
+                                    <td colspan="3" style="border:1px solid #000; padding:4px;">
+                                        <strong>Last updated on</strong><br/>
+                                        <span t-esc="datetime.datetime.now().strftime('%d-%b-%Y')"/>
+                                    </td>
+                                </tr>
+
+                                <!-- EMPLOYER + EMPLOYEE -->
+                                <tr>
+                                    <!-- <td colspan="3" style="border:1px solid #000; padding:4px; vertical-align:top;">
+                                        <strong>Name and Address of the Employer</strong><br/>
+                                        <span t-field="employee.company_id.name"/><br/>
+                                        <span t-field="employee.company_id.street"/><br/>
+                                        <span t-field="employee.company_id.city"/> - <span t-field="employee.company_id.zip"/>
+                                    </td> -->
+                                    <td colspan="3" style="border:1px solid #000; padding:4px; vertical-align:top;">
+                                        <strong>Name and Address of the Employer</strong><br/>
+
+                                        THE ZIGMA TECHNOLOGIES (P) LIMITED<br/>
+                                        New No.2 old No. 7, North Crescent Road,<br/>
+                                        Lakshmi Colony, GN Chetty Road, T. Nagar<br/>
+                                        Chennai - 600034
+                                    </td>
+                                    <td colspan="3" style="border:1px solid #000; padding:4px; vertical-align:top;">
+                                        <strong>Name and Designation of the Employee</strong><br/>
+                                    <span t-field="form16.employee_id.name"/><br/>
+                                        <span t-field="form16.employee_id.job_id.name"/>
+                                    </td>
+                                </tr>
+
+                                <!-- PAN / TAN GRID HEADER -->
+                                <tr style="background:#f2f2f2; font-weight:bold;">
+                                    <td style="border:1px solid #000; text-align:center; width:25%; padding:4px;">
+                                        PAN of the Deductor
+                                    </td>
+                                    <td style="border:1px solid #000; text-align:center; width:25%; padding:4px;">
+                                        TAN of the Deductor
+                                    </td>
+                                    <td style="border:1px solid #000; text-align:center; width:15%; padding:4px;">
+                                        PAN of the Employee
+                                    </td>
+                                    <td colspan="3" style="border:1px solid #000; text-align:center; width:35%; padding:4px;">
+                                        Employee Reference No. provided by the Employer (If available)
+                                    </td>
+                                </tr>
+
+                                <!-- PAN / TAN GRID VALUES -->
+                                <tr>
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">
+                                        <!-- <span t-field="employee.company_id.vat"/> -->
+                                    </td>
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">
+                                        <!-- <span t-field="employee.company_id.company_registry"/> -->
+                                    </td>
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">
+                                    <span t-field="form16.employee_id.pan"/>
+                                    </td>
+                                    <td colspan="3" style="border:1px solid #000; text-align:center; padding:4px;">
+                                        <span t-field="form16.employee_id.emp_id"/>
+                                    </td>
+                                </tr>
+
+                                <!-- CIT / AY / PERIOD HEADER -->
+                                <tr style="background:#f2f2f2; font-weight:bold;">
+                                    <td colspan="2" style="border:1px solid #000; text-align:center; padding:4px;">
+                                        CIT (TDS)
+                                    </td>
+                                    <td colspan="2" style="border:1px solid #000; text-align:center; padding:4px;">
+                                        Assessment Year
+                                    </td>
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">
+                                        Period From
+                                    </td>
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">
+                                        Period To
+                                    </td>
+                                </tr>
+
+                                <!-- CIT / AY / PERIOD VALUES -->
+                                <tr>
+                                    <td colspan="2" style="border:1px solid #000; padding:6px; vertical-align:top;">
+                                        <strong>Address</strong> :
+                                        <!-- <span t-field="employee.cit_address"/> -->
+                                        <br/>
+                                        <strong>City</strong> : 
+                                        <!-- <span t-field="employee.cit_city"/> -->
+                                        <br/>
+                                        <strong>Pincode</strong> : 
+                                        <!-- <span t-field="employee.cit_pincode"/> -->
+                                    </td>
+                                    <td colspan="2" style="border:1px solid #000; text-align:center; vertical-align:middle; padding:4px;">
+                                        <span t-field="form16.assessment_year"/>
+                                    </td>
+                                    <td style="border:1px solid #000; text-align:center; vertical-align:middle; padding:4px;">
+                                        <span t-field="form16.period_from"/>
+                                    </td>
+                                    <td style="border:1px solid #000; text-align:center; vertical-align:middle; padding:4px;">
+                                        <span t-field="form16.period_to"/>
+                                    </td>
+                                </tr>
+
+                                <!-- SUMMARY TITLE -->
+                                <tr>
+                                    <td colspan="6" style="border:1px solid #000; background:#f2f2f2; font-weight:bold; text-align:center; padding:4px;">
+                                        Summary of amount paid/credited and tax deducted at source thereon in respect of the employee
+                                    </td>
+                                </tr>
+
+                                <!-- SUMMARY TABLE HEADER -->
+                                <tr style="background:#f2f2f2; font-weight:bold;">
+                                    <td style="border:1px solid #000; padding:4px; text-align:center;">Quarter(s)</td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:center;">Receipt Numbers of original statements of TDS under sub-section(3) of section 200</td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:center;">Amount paid /credited</td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:center;" colspan="2">Amount of tax deducted in respect of the employee</td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:center;">Amount of tax deposited / remitted in respect of the employee</td>
+                                </tr>
+
+                                <!-- QUARTER 1 -->
+                                <tr>
+                                    <td style="border:1px solid #000; padding:4px;">Quarter 1</td>
+                                    <td style="border:1px solid #000; padding:4px;"><span t-field="form16.q1_receipt_number"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;"><span t-field="form16.q1_amount_paid"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;" colspan="2"><span t-field="form16.q1_tax_deducted"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;"><span t-field="form16.q1_tax_deposited"/></td>
+                                </tr>
+
+                                <!-- QUARTER 2 -->
+                                <tr>
+                                    <td style="border:1px solid #000; padding:4px;">Quarter 2</td>
+                                    <td style="border:1px solid #000; padding:4px;"><span t-field="form16.q2_receipt_number"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;"><span t-field="form16.q2_amount_paid"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;" colspan="2"><span t-field="form16.q2_tax_deducted"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;"><span t-field="form16.q2_tax_deposited"/></td>
+                                </tr>
+
+                                <!-- QUARTER 3 -->
+                                <tr>
+                                    <td style="border:1px solid #000; padding:4px;">Quarter 3</td>
+                                    <td style="border:1px solid #000; padding:4px;"><span t-field="form16.q3_receipt_number"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;"><span t-field="form16.q3_amount_paid"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;" colspan="2"><span t-field="form16.q3_tax_deducted"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;"><span t-field="form16.q3_tax_deposited"/></td>
+                                </tr>
+
+                                <!-- QUARTER 4 -->
+                                <tr>
+                                    <td style="border:1px solid #000; padding:4px;">Quarter 4</td>
+                                    <td style="border:1px solid #000; padding:4px;"><span t-field="form16.q4_receipt_number"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;"><span t-field="form16.q4_amount_paid"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;" colspan="2"><span t-field="form16.q4_tax_deducted"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;"><span t-field="form16.q4_tax_deposited"/></td>
+                                </tr>
+
+                                <!-- TOTAL -->
+                                <tr style="font-weight:bold; background:#f2f2f2;">
+                                    <td style="border:1px solid #000; padding:4px;">Total</td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;"><span t-field="form16.total_amount_paid"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;" colspan="2"><span t-field="form16.total_tax_deducted"/></td>
+                                    <td style="border:1px solid #000; padding:4px; text-align:right;"><span t-field="form16.total_tax_deposited"/></td>
+                                </tr>
+
+                                <!-- SECTION I TITLE -->
+                                <tr>
+                                    <td colspan="6" style="border:1px solid #000; background:#e6e6e6; font-weight:bold; text-align:center; padding:4px;">
+                                        I. DETAILS OF TAX DEDUCTED AND DEPOSITED IN THE CENTRAL GOVERNMENT ACCOUNT THROUGH BOOK ADJUSTMENT
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="border:1px solid #000; text-align:center; padding:4px;">
+                                        (The Employer to provide the payment wise details of tax deducted and deposited with respect to the employee)
+                                    </td>
+                                </tr>
+
+                                <!-- SECTION I HEADER ROW 1 -->
+                                <tr style="background:#f2f2f2; font-weight:bold;">
+                                    <td rowspan="2" style="border:1px solid #000; text-align:center; vertical-align:middle; padding:4px;">S.No.</td>
+                                    <td rowspan="2" style="border:1px solid #000; text-align:center; vertical-align:middle; padding:4px;">Tax Deposited in respect of the employee (Rs.)</td>
+                                    <td colspan="4" style="border:1px solid #000; text-align:center; padding:4px;">Book identification number (BIN)</td>
+                                </tr>
+
+                                <!-- SECTION I HEADER ROW 2 -->
+                                <tr style="background:#f2f2f2; font-weight:bold;">
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">Receipt Numbers of Form No.24G</td>
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">DDO Sequence Number in the Book Adjustment Mini Statement</td>
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">Date on which tax deposited (dd/mm/yyyy)</td>
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">Status of matching with Form No.24G</td>
+                                </tr>
+
+                                <!-- SECTION I DATA ROW -->
+                                <tr>
+                                    <td style="border:1px solid #000; padding:4px;">1</td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                </tr>
+
+                                <!-- SECTION I TOTAL -->
+                                <tr style="font-weight:bold;">
+                                    <td style="border:1px solid #000; padding:4px;">Total</td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                    <td colspan="4" style="border:1px solid #000; padding:4px;"></td>
+                                </tr>
+
+                                <!-- SECTION II TITLE -->
+                                <tr>
+                                    <td colspan="6" style="border:1px solid #000; background:#d9d9d9; font-weight:bold; text-align:center; padding:4px;">
+                                        II. DETAILS OF TAX DEDUCTED AND DEPOSITED IN THE CENTRAL GOVERNMENT ACCOUNT THROUGH CHALLAN
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="border:1px solid #000; text-align:center; padding:4px;">
+                                        (The Employer to provide the payment wise details of tax deducted and deposited with respect to the employee)
+                                    </td>
+                                </tr>
+
+                                <!-- SECTION II HEADER ROW 1 -->
+                                <tr style="background:#f2f2f2; font-weight:bold;">
+                                    <td rowspan="2" style="border:1px solid #000; text-align:center; vertical-align:middle; padding:4px;">S.No.</td>
+                                    <td rowspan="2" style="border:1px solid #000; text-align:center; vertical-align:middle; padding:4px;">Tax Deposited in respect of the employee (Rs.)</td>
+                                    <td colspan="4" style="border:1px solid #000; text-align:center; padding:4px;">Challan identification number (CIN)</td>
+                                </tr>
+
+                                <!-- SECTION II HEADER ROW 2 -->
+                                <tr style="background:#f2f2f2; font-weight:bold;">
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">BSR Code of the Bank Branch</td>
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">Date on which tax deposited (dd/mm/yyyy)</td>
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">Challan Serial Number</td>
+                                    <td style="border:1px solid #000; text-align:center; padding:4px;">Status of matching with OLTAS*</td>
+                                </tr>
+
+                                <!-- SECTION II DATA ROW -->
+                                <tr>
+                                    <td style="border:1px solid #000; padding:4px;">1</td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                </tr>
+
+                                <!-- SECTION II TOTAL -->
+                                <tr style="font-weight:bold;">
+                                    <td style="border:1px solid #000; padding:4px;">Total</td>
+                                    <td style="border:1px solid #000; padding:4px;"></td>
+                                    <td colspan="4" style="border:1px solid #000; padding:4px;"></td>
+                                </tr>
+
+                                <!-- VERIFICATION SECTION - kept together on same page -->
+                                </tbody>
+                                <tbody style="page-break-inside: avoid;">
+                                <tr>
+                                    <td colspan="6" style="border:1px solid #000; background:#f2f2f2; font-weight:bold; text-align:center; padding:4px;">
+                                        Verification
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6" style="border:1px solid #000; padding:8px;">
+                                        I <span t-field="form16.authorized_signatory_name"/>
+                                        son/daughter of
+                                        <span t-field="form16.authorized_signatory_father_name"/>
+                                        Working in the capacity of
+                                        <span t-field="form16.authorized_signatory_designation"/>
+                                        do hereby certify that a sum of Rs.
+                                        <span t-field="form16.total_tax_deducted"/>
+                                        [ (in words)] has been deducted at source and paid to the credit of the Central Government.
+                                        I further certify that the information given above is true and correct based on the books of account,
+                                        documents and other available records.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3" style="border:1px solid #000; padding:8px; vertical-align:top;">
+                                        <strong>Place</strong> : <br/><br/>
+                                        <strong>Date</strong> : <span t-esc="datetime.datetime.now().strftime('%d-%b-%Y')"/><br/><br/>
+                                        <strong>Designation</strong> : <span t-field="form16.authorized_signatory_designation"/>
+                                    </td>
+                                    <td colspan="3" style="border:1px solid #000; padding:8px; vertical-align:top;">
+                                        <strong>Signature of person responsible for deduction of tax</strong><br/><br/><br/>
+                                        <strong>Full Name</strong> : <span t-field="form16.authorized_signatory_name"/>
+                                    </td>
+                                </tr>
+
+                                
+                                </tbody>
+
+                            </table>
+
+                            
+                            <!-- ================= PAGE BREAK ================= -->
+                            <div style="page-break-after:always;"></div>
+
+
+                                <!-- ================= PART B CLEAN VERSION ================= -->
+
+                                    <!-- <div style="font-size: 9pt; margin-bottom: 15px;">
+                                        <div><strong>Name of Employee :</strong> <span t-field="employee.name"/>(<span t-field="employee.employee_id"/>)</div>
+                                        <div style="margin-top: 3px;"><strong>Employee No. :</strong> <span t-field="employee.employee_id"/></div>
+                                    </div> -->
+
+                                    <div style="font-size: 10pt; margin-bottom: 4px;">
+                                            <div>
+                                                <strong>Name of Employee :</strong>
+                                                <!-- <span t-field="form16.employee_name"/>  -->
+                                                (<span t-field="form16.employee_id"/>)
+                                            </div>
+
+                                            <div style="margin-top: 3px;">
+                                                <strong>Employee No. :</strong>
+                                                <span t-field="form16.employee_id.emp_id"/>
+                                            </div>
+                                    </div>
+
+
+                                        <!-- ==================== PART B ==================== -->
+
+                                        <table style="width:100%; border-collapse:collapse; border:1px solid #000;
+                                                    table-layout:fixed; font-size:12pt;">
+
+                                            <!-- 8 COLUMN STRUCTURE -->
+                                            <col width="6%"/>
+                                            <col width="44%"/>
+                                            <col width="5%"/>
+                                            <col width="12%"/>
+                                            <col width="5%"/>
+                                            <col width="12%"/>
+                                            <col width="5%"/>
+                                            <col width="11%"/>
+
+                                            <!-- HEADER -->
+                                            <tr>
+                                                <td colspan="8" style="border-bottom:1px solid #000; text-align:center; font-weight:bold;">
+                                                    PART B
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="8" style="border-bottom:1px solid #000; text-align:center;">
+                                                    Details of Salary paid and any other income and tax deducted
+                                                </td>
+                                            </tr>
+
+                                            <!-- 1. Gross Salary -->
+                                            <tr>
+                                                <td style="border-right:1px solid #000;">1.</td>
+                                                <td style="border-right:1px solid #000;"><strong>Gross Salary</strong></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <!-- a -->
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;">
+                                                    a) Salary as per Provisions contained in sec.17(1)
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                    <span t-field="form16.salary_sec_17_1"
+                                                        />
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <!-- b -->
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;">
+                                                    b)Value of perquisites u/s 17(2) (as per Form No.
+                                                        12BA. wherever applicable)
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                    <span t-field="form16.perquisites_sec_17_2"
+                                                    />
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <!-- c -->
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;">
+                                                    c) Profits in lieu of salary under section 17(3) (as
+                                                        per Form No.12BA, wherever applicable)
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                    <span t-field=" form16.profits_sec_17_3"/></td>
+                                                
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <!-- d Total -->
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;">d) Total</td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <span t-field="form16.gross_salary_total"
+                                                    />
+                                                </td>
+                                            </tr>
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;">e) Reported total amount of salary received  from other employer(s)</td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <span t-field="form16.gross_salary_total"
+                                                    />
+                                                </td>
+                                            </tr>
+
+                                            <!-- 2 -->
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">2.</td>
+                                                <td style="border-right:1px solid #000;">
+                                                    Less: Allowance to the Extent exempt u/s 10
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <span t-field="form16.exempt_allowances"
+                                                    />
+                                                </td>
+                                            </tr>
+
+                                            <!-- 3 -->
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">3.</td>
+                                                <td style="border-right:1px solid #000;">Balances (1-2)</td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <span t-field="form16.balance_after_exemptions"
+                                                        />
+                                                </td>
+                                            </tr>
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">4.</td>
+                                                <td style="border-right:1px solid #000;">Deductions Standard Deduction under section 16(1)</td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <span t-field="form16.balance_after_exemptions"
+                                                        />
+                                                </td>
+                                            </tr>
+
+                                            <!-- 5 -->
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">5.</td>
+                                                <td style="border-right:1px solid #000;">Aggregate of deductions</td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <span t-field=" form16.total_deductions"/>
+                                                       
+                                                </td>
+                                            </tr>
+
+                                            <!-- 6 -->
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">6.</td>
+                                                <td style="border-right:1px solid #000;">
+                                                    Income Chargeable under the head 'salaries' (3-5)
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <!-- <span t-field="form16.income_chargeable_salary"
+                                                        /> -->
+                                                </td>
+                                            </tr>
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">7.</td>
+                                                <td style="border-right:1px solid #000;">
+                                                Add: Any other income reported by the employee
+
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <!-- <span t-field="form16.income_chargeable_salary"
+                                                        /> -->
+                                                </td>
+                                            </tr>
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">8.</td>
+                                                <td style="border-right:1px solid #000;"> Total
+
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <span t-field="form16.income_chargeable_salary"
+                                                        />
+                                                </td>
+                                            </tr>
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">9.</td>
+                                                <td style="border-right:1px solid #000;">Gross total income (6+8)
+
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <span t-field="form16.income_chargeable_salary"
+                                                        />
+                                                </td>
+                                            </tr>
+
+                                            <!-- 9999 -->
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">10.</td>
+                                                <td style="border-right:1px solid #000;"><strong>Deductions under Chapter VI-A</strong></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <!-- a -->
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;">
+                                                    a) (A) Sections 80C, 80CCC and 80CCD
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                    <span t-field="form16.salary_sec_17_1"
+                                                        />
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                            <td style="border-right:1px solid #000; padding-left:20px;">a) Section 80C
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                    <!-- <span t-field="employee.section_80c"
+                                                    /> -->
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; padding-left:20px;">1) Employee Provident Fund (EPF)
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+
+                                            <!-- b -->
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                            <td style="border-right:1px solid #000; padding-left:20px;"> b) Section 80CCC
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                    <!-- <span t-field="employee.section_80ccc"
+                                                        /> -->
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+
+                                            <!-- c -->
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                            <td style="border-right:1px solid #000; padding-left:20px;">c) Section 80CCD
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                    <!-- <span t-field="employee.section_80ccd"
+                                                    /> -->
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                        <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+
+                                                <!-- Description column -->
+                                                <td style="border-right:1px solid #000; font-size:9pt; padding:6px;">
+                                                    <strong>Note:</strong>
+                                                    Aggregate amount deductible under sections 80C, 80CCC and 80CCD(1)
+                                                    shall not exceed INR One Lakh Fifty Thousand.
+                                                </td>
+
+                                                <!-- Empty monetary columns to maintain structure -->
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                            <td style="border-right:1px solid #000; padding-left:20px;">d) Section 80CCD(1B)
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; padding-left:20px;">e) Section 80CCD(2)
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; padding-left:20px;">f) Section 80CCG
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; font-weight:bold;">
+                                                    (B) Other Sections (e.g. 80D, 80E, 80G, 80TTA etc.) Under Chapter VI-A
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                            <td style="border-right:1px solid #000; padding-left:20px;">a) Section 80D
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                            <td style="border-right:1px solid #000; padding-left:20px;">b) Section 80E
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                            <td style="border-right:1px solid #000; padding-left:20px;">c) Section 80G
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                            <td style="border-right:1px solid #000; padding-left:20px;">d) Section 80TTA
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <td style="border-right:1px solid #000;"></td>
+                                            <td style="border-right:1px solid #000; padding-left:20px;">e) Others
+                                                </td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="border-right:1px solid #000; text-align:right;">
+                                                
+                                                </td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td></td>
+                                            </tr>
+
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">11.</td>
+                                                <td style="border-right:1px solid #000;">Aggregate of deductible amount under Chapter VIA</td>
+
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    
+                                                </td>
+                                            </tr>
+
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">12.</td>
+                                                <td style="border-right:1px solid #000;">Total Income (9-11)</td>
+
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <!-- <span t-field="employee.balance_after_exemptions"
+                                                        /> -->
+                                                </td>
+                                            </tr>
+
+                                            <!-- <div style="text-align: center; margin: 25px 0; font-weight: bold; font-size: 9pt;">Continued...</div> -->
+
+                                        </table>
+
+                            <!-- ================= PAGE BREAK ================= -->
+                            <div style="page-break-after:always;"></div>
+
+
+                                <div style="font-size: 10pt; margin-bottom: 4px;">
+                                            <div>
+                                                <strong>Name of Employee :</strong>
+                                            
+                                                <span t-field="form16.employee_id"/>
+                                            </div>
+
+                                            <div style="margin-top: 3px;">
+                                                <strong>Employee No. :</strong>
+                                                <span t-field="form16.employee_id.emp_id"/>
+                                            </div>
+                                </div>
+
+                                    <table style="width:100%; border-collapse:collapse; border:1px solid #000;
+                                                    table-layout:fixed; font-size:12pt;">
+
+                                            <!-- 8 COLUMN STRUCTURE -->
+                                            <col width="6%"/>
+                                            <col width="44%"/>
+                                            <col width="5%"/>
+                                            <col width="12%"/>
+                                            <col width="5%"/>
+                                            <col width="12%"/>
+                                            <col width="5%"/>
+                                            <col width="11%"/>
+
+
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">13.</td>
+                                                <td style="border-right:1px solid #000;">Tax on total income</td>
+
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <!-- <span t-field="employee.balance_after_exemptions"
+                                                        /> -->
+                                                </td>
+                                            </tr>
+
+
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">14.</td>
+                                                <td style="border-right:1px solid #000;">Credit U/s 87A</td>
+
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <!-- <span t-field="employee.balance_after_exemptions"
+                                                        /> -->
+                                                </td>
+                                            </tr>
+
+
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">15.</td>
+                                                <td style="border-right:1px solid #000;">Surcharge</td>
+
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <!-- <span t-field="employee.balance_after_exemptions"
+                                                        /> -->
+                                                </td>
+                                            </tr>
+
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">16.</td>
+                                                <td style="border-right:1px solid #000;">Health and Education Cess</td>
+
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <!-- <span t-field="employee.balance_after_exemptions"
+                                                        /> -->
+                                                </td>
+                                            </tr>
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">17.</td>
+                                                <td style="border-right:1px solid #000;">Tax Payable (13 + 15 + 16 - 14)</td>
+
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <!-- <span t-field="employee.balance_after_exemptions"
+                                                        /> -->
+                                                </td>
+                                            </tr>
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">18.</td>
+                                                <td style="border-right:1px solid #000;">Less: Relief under section 89 (attach details)</td>
+
+
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <!-- <span t-field="employee.balance_after_exemptions"
+                                                        /> -->
+                                                </td>
+                                            </tr>
+
+                                            <tr style="font-weight:bold;">
+                                                <td style="border-right:1px solid #000;">19.</td>
+                                                <td style="border-right:1px solid #000;">Tax Payable (17 - 18)</td>
+
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000;"></td>
+                                                <td style="border-right:1px solid #000; text-align:center;">Rs</td>
+                                                <td style="text-align:right;">
+                                                    <!-- <span t-field="employee.balance_after_exemptions"
+                                                        /> -->
+                                                </td>
+                                            </tr>
+
+                                            
+
+                                                
+
+                                            
+
+                                    </table>
+
+                                    <table style="width:100%; border-collapse:collapse; table-layout:fixed; font-size:11pt;">
+
+                                                        <!-- TITLE -->
+                                                        <tr>
+                                                            <td colspan="2" style="border:1px solid #000; background:#d9d9d9; font-weight:bold; text-align:center;">
+                                                                Verification
+                                                            </td>
+                                                        </tr>
+
+                                                        <!-- PARAGRAPH -->
+                                                        <tr>
+                                                            <td colspan="2" style="border:1px solid #000; padding:8px;">
+                                                                I <span t-field="form16.authorized_signatory_name"/>
+                                                                son/daughter of 
+                                                                <span t-field="form16.authorized_signatory_father_name"/>
+                                                                working in the capacity of
+                                                                <span t-field="form16.authorized_signatory_designation"/>
+                                                                do hereby certify that a sum of Rs.
+                                                                <span t-field="form16.total_tax_deducted"/>
+                                                                has been deducted at source and paid to the credit of the Central Government.
+                                                                I further certify that the information given above is true and correct based on the books of account,
+                                                                documents and other available recordssssssssssssssssssss.
+                                                            </td>
+                                                        </tr>
+
+                                                        <!-- FOOTER ROW -->
+                                                        <tr>
+                                                            <td style="border:1px solid #000; width:50%; padding:8px;">
+                                                                <strong>Place</strong> : <br/><br/>
+                                                                <strong>Date</strong> :
+                                                                <span t-esc="datetime.datetime.now().strftime('%d-%b-%Y')"/><br/><br/>
+                                                                <strong>Designation</strong> :
+                                                                <span t-field="form16.authorized_signatory_designation"/>
+                                                            </td>
+
+                                                            <!-- <td style="border:1px solid #000; width:50%; padding:8px;">
+                                                                <strong>Signature of person responsible for deduction of tax</strong><br/><br/><br/>
+                                                                <strong>Full Name</strong> :
+                                                                <span t-field="form16.authorized_signatory_name"/>
+                                                            </td> -->
+
+                                                            <td style="border:1px solid #000; width:50%; padding:8px;">
+                                                                <strong>Signature of person responsible for deduction of tax</strong>
+                                                                <br/><br/><br/>
+
+                                                                <strong>Full Name</strong> :
+                                                                <span t-field="form16.authorized_signatory_name"/>
+
+                                                                <br/><br/>
+                                                                <t t-if="form16.seal_signature_b64">
+                                                                    <img t-att-src="form16.seal_signature_b64"
+                                                                        style="max-height:120px; max-width:200px;"/>
+                                                                </t>
+                                                                <t t-else="">
+                                                                    <span style="color:#aaa; font-size:8pt;">[No Seal Uploaded]</span>
+                                                                </t>
+
+                                                            
+                                                            </td>
+                                                        </tr>
+                                                        
+                                                    
+
+                                                    </table>
+                                                    
+                                                
+
+                        </div>
+                </div>        
+            </t>
+        </t>
+    </template>
+   
+
+    <!-- Report Action -->
+    <!-- <record id="action_form16_selvi_format_report" model="ir.actions.report">
+        <field name="name">Form 16</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_employee_form16.form16_selvi_format_template</field>
+        <field name="report_file">hr_employee_form16.form16_selvi_format_template</field>
+        <field name="print_report_name">'Form16_' + object.name</field>
+        <field name="paperformat_id" ref="base.paperformat_us"/>
+        <field name="binding_model_id" ref="hr.model_hr_employee"/>
+        <field name="binding_type">report</field>
+    </record> -->
+
+    <record id="action_form16_selvi_format_report" model="ir.actions.report">
+        <field name="name">Form 16</field>
+        <field name="model">hr.form16</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_employee_form16.form16_selvi_format_template</field>
+        <field name="report_file">hr_employee_form16.form16_selvi_format_template</field>
+        <field name="print_report_name">'Form16_' + object.employee_id.name</field>
+        <field name="paperformat_id" ref="base.paperformat_us"/>
+        <field name="binding_model_id" ref="model_hr_form16"/>
+        <field name="binding_type">report</field>
+
+            <!-- ✅ ADD THESE TWO LINES -->
+        <!-- <field name="attachment">'Form16_' + object.employee_id.name + '.pdf'</field>
+        <field name="attachment_use">True</field> -->
+    </record>
+</odoo>
+
+
+
+
+<!-- 000000000000000000000000000000000000000000 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
